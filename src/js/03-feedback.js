@@ -34,7 +34,7 @@ function onTextareaInput(e) {
 function populateMessage() {
   const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
   if (data) {
-    email.value = data.email;
-    message.value = data.message;
+    refs.email.value = data.email;
+    refs.message.value = data.message;
   }
 }
