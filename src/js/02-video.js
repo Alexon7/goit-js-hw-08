@@ -8,7 +8,7 @@ const STORAGE_KEY = 'videoplayer-current-time';
 const throttle = require('lodash.throttle');
 
 function onPlay(data) {
-  localStorage.getItem(STORAGE_KEY, data.seconds);
+  localStorage.setItem(STORAGE_KEY, data.seconds);
 }
 
 player.on('timeupdate', throttle(onPlay, 1000));
